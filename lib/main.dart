@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wireguard_flutter/ui/common/app_router.dart';
 import 'package:wireguard_flutter/ui/onboarding_page_screen.dart';
 import 'package:wireguard_flutter/ui/tunnel_details.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
   runApp(MyApp());
 }
 
