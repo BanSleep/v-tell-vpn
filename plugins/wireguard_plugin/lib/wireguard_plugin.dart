@@ -2,11 +2,11 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:wireguard_plugin/model/tunnel_stats.dart';
 
 import 'model/set_state_params.dart';
 import 'model/state_change_data.dart';
 import 'model/tunnel.dart';
+import 'model/tunnel_stats.dart';
 
 class WireguardPlugin {
   static const MethodChannel _channel =

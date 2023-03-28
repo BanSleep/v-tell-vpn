@@ -383,19 +383,19 @@ class Buttons extends StatelessWidget {
         builder: (context, setState) {
           bool isEnabled = false;
           // TODO: change to new [OutlinedButton]
-          return OutlineButton(
-            padding: horizontalPadding != null
-                ? AppPadding.horizontal(horizontalPadding ?? 0)
-                : AppPadding.allZero,
+          return OutlinedButton(
+            // padding: horizontalPadding != null
+            //     ? AppPadding.horizontal(horizontalPadding ?? 0)
+            //     : AppPadding.allZero,
             key: key,
-            borderSide: BorderSide(
-              width: borderWidth ?? _defaultBorderWidth,
-              color: borderColor ?? Colors.blue,
-              style: BorderStyle.solid,
-            ),
-            disabledBorderColor: buttonDisabledColor ?? Colors.blue,
-            color: buttonColor ?? Theme.of(context).accentColor,
-            shape: shape,
+            // borderSide: BorderSide(
+            //   width: borderWidth ?? _defaultBorderWidth,
+            //   color: borderColor ?? Colors.blue,
+            //   style: BorderStyle.solid,
+            // ),
+            // disabledBorderColor: buttonDisabledColor ?? Colors.blue,
+            // color: buttonColor ?? Theme.of(context).accentColor,
+            // shape: shape,
             onPressed: onPressed == null
                 ? null
                 : () async {
@@ -453,14 +453,14 @@ class Buttons extends StatelessWidget {
       button = StatefulBuilder(
         builder: (context, setState) {
           bool isEnabled = false;
-          return FlatButton(
-            padding: horizontalPadding != null
-                ? AppPadding.horizontal(horizontalPadding ?? 0)
-                : AppPadding.allZero,
+          return TextButton(
+            // padding: horizontalPadding != null
+            //     ? AppPadding.horizontal(horizontalPadding ?? 0)
+            //     : AppPadding.allZero,
             key: key,
-            disabledColor: buttonDisabledColor ?? Colors.blue,
-            color: buttonColor ?? Theme.of(context).accentColor,
-            shape: shape,
+            // disabledColor: buttonDisabledColor ?? Colors.blue,
+            // color: buttonColor ?? Theme.of(context).accentColor,
+            // shape: shape,
             onPressed: onPressed == null
                 ? null
                 : () async {
@@ -479,15 +479,15 @@ class Buttons extends StatelessWidget {
       button = StatefulBuilder(
         builder: (context, setState) {
           bool isEnabled = false;
-          return FlatButton(
-            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            padding: horizontalPadding != null
-                ? AppPadding.horizontal(horizontalPadding ?? 0)
-                : AppPadding.allZero,
+          return TextButton(
+            // materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            // padding: horizontalPadding != null
+            //     ? AppPadding.horizontal(horizontalPadding ?? 0)
+            //     : AppPadding.allZero,
             key: key,
-            disabledColor: buttonDisabledColor ?? Colors.blue,
-            color: Colors.transparent,
-            shape: shape,
+            // disabledColor: buttonDisabledColor ?? Colors.blue,
+            // color: Colors.transparent,
+            // shape: shape,
             onPressed: onPressed == null
                 ? null
                 : () async {
@@ -506,14 +506,14 @@ class Buttons extends StatelessWidget {
       button = StatefulBuilder(
         builder: (context, setState) {
           bool isEnabled = false;
-          return RaisedButton(
-            padding: horizontalPadding != null
-                ? AppPadding.horizontal(horizontalPadding ?? 0)
-                : AppPadding.allZero,
+          return ElevatedButton(
+            // padding: horizontalPadding != null
+            //     ? AppPadding.horizontal(horizontalPadding ?? 0)
+            //     : AppPadding.allZero,
             key: key,
-            disabledColor: buttonDisabledColor ?? Colors.blue,
-            color: buttonColor ?? Theme.of(context).accentColor,
-            shape: shape,
+            // disabledColor: buttonDisabledColor ?? Colors.blue,
+            // color: buttonColor ?? Theme.of(context).accentColor,
+            // shape: shape,
             onPressed: onPressed == null
                 ? null
                 : () async {

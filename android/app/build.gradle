@@ -27,7 +27,7 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 apply plugin: 'kotlin-kapt'
 
 android {
-  compileSdkVersion 30
+  compileSdkVersion 31
 
   compileOptions {
     /// 3 options below to run wireguard on Android 25 or lower
