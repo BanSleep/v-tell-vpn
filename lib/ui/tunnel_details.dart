@@ -2,24 +2,27 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wireguard_flutter/repository/models.dart';
+import 'package:wireguard_flutter/ui/common/text_styles.dart';
 
 import '../log.dart';
-import 'common/buttons.dart';
 import 'common/texts.dart';
 import 'ui_constants.dart';
 
 const initName = 'my-tunnel';
-const initAddress = "10.200.200.185";
-const initPort = "51820";
-const initDnsServer = "116.203.231.122";
-const initPrivateKey = "mIWKevXKBlBxXEAtzJJtLOU0TjSduvvm9rUQpvdPBkM=";
+const initAddress = "10.10.0.4/32";
+const initPort = "1280";
+const initDnsServer = "8.8.8.8";
+const initPrivateKey = "2P23r4Oj0wZEoMdXwJv3gVOYCkhPCrnG0AtRQ1G/m1U=";
 const initAllowedIp = "0.0.0.0/0";
-const initPublicKey = "9Xhc/RmDmmyy54+F/mhSh1KEV0/bjD6ruAp934pmlDk=";
-const initEndpoint = "wghongkong01.spidervpnservers.com:443";
+const initPublicKey = "WPte+VNVZknRVDEi2OmlUzBL6GwM5d06NxQAKSDAsws=";
+const initEndpoint = "74.208.203.188:443";
 
 class TunnelDetails extends StatefulWidget {
   @override
@@ -36,35 +39,13 @@ class _TunnelDetailsState extends State<TunnelDetails> {
   String _peerAllowedIp = initAllowedIp;
   String _peerPublicKey = initPublicKey;
   String _peerEndpoint = initEndpoint;
-  final _nameController = TextEditingController(
-    text: initName,
-  );
-  final _addressController = TextEditingController(
-    text: initAddress,
-  );
-  final _listenPortController = TextEditingController(
-    text: initPort,
-  );
-  final _dnsServerController = TextEditingController(
-    text: initDnsServer,
-  );
-  final _privateKeyController = TextEditingController(
-    text: initPrivateKey,
-  );
-  final _peerAllowedIpController = TextEditingController(
-    text: initAllowedIp,
-  );
-  final _peerPublicKeyController = TextEditingController(
-    text: initPublicKey,
-  );
-  final _peerEndpointController = TextEditingController(
-    text: initEndpoint,
-  );
   bool _connected = false;
   bool _scrolledToTop = true;
   bool _gettingStats = true;
   Stats? _stats;
   Timer? _gettingStatsTimer;
+
+  int sliderIndex = -1;
 
   @override
   void initState() {
@@ -93,147 +74,70 @@ class _TunnelDetailsState extends State<TunnelDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[100],
-      appBar: AppBar(
-        title: Texts.semiBold(
-          'Edit tunnel',
-          color: Colors.black,
-          textSize: AppSize.fontMedium,
-        ),
-        backgroundColor: Colors.grey[100],
-        elevation: _scrolledToTop ? 0 : null,
-      ),
-      body: NotificationListener<ScrollUpdateNotification>(
-        onNotification: (notification) {
-          setState(() => _scrolledToTop = notification.metrics.pixels == 0);
-          return true;
-        },
-        child: Stack(
-          children: [
-            SingleChildScrollView(
-              child: Padding(
-                padding: AppPadding.allNormal,
-                child: Column(
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        child: NotificationListener<ScrollUpdateNotification>(
+          onNotification: (notification) {
+            setState(() => _scrolledToTop = notification.metrics.pixels == 0);
+            return true;
+          },
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: 30.h),
+                Row(
                   children: [
-                    _divider('Stats'),
-                    _statsWidget(_stats),
-                    _divider('Tunnel'),
-                    _input(
-                      hint: 'Tunnel name',
-                      enabled: false,
-                      controller: _nameController,
-                      onChanged: (v) => setState(() => _name = v),
+                    Expanded(
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          'V-Tell VPN',
+                          style: TextStyles.regular14,
+                        ),
+                      ),
                     ),
-                    const Vertical.small(),
-                    _input(
-                      hint: 'Address',
-                      enabled: !_connected,
-                      controller: _addressController,
-                      onChanged: (v) => setState(() => _address = v),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: SvgPicture.asset('assets/icon/burger.svg'),
                     ),
-                    const Vertical.small(),
-                    _input(
-                      hint: 'Listen port',
-                      enabled: !_connected,
-                      controller: _listenPortController,
-                      onChanged: (v) => setState(() => _listenPort = v),
-                    ),
-                    const Vertical.small(),
-                    _input(
-                      hint: 'DNS server',
-                      enabled: !_connected,
-                      controller: _dnsServerController,
-                      onChanged: (v) => setState(() => _dnsServer = v),
-                    ),
-                    const Vertical.small(),
-                    _input(
-                      hint: 'Private key',
-                      enabled: !_connected,
-                      controller: _privateKeyController,
-                      onChanged: (v) => setState(() => _privateKey = v),
-                    ),
-                    _divider('Peer'),
-                    _input(
-                      hint: 'Peer allowed IP',
-                      enabled: !_connected,
-                      controller: _peerAllowedIpController,
-                      onChanged: (v) => setState(() => _peerAllowedIp = v),
-                    ),
-                    const Vertical.small(),
-                    _input(
-                      hint: 'Peer public key',
-                      enabled: !_connected,
-                      controller: _peerPublicKeyController,
-                      onChanged: (v) => setState(() => _peerPublicKey = v),
-                    ),
-                    const Vertical.small(),
-                    _input(
-                      hint: 'Peer endpoint',
-                      enabled: !_connected,
-                      controller: _peerEndpointController,
-                      onChanged: (v) => setState(() => _peerEndpoint = v),
-                    ),
-                    Padding(
-                      padding: AppPadding.top(60),
-                    )
                   ],
                 ),
-              ),
-            ),
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Container(
-                padding: AppPadding.allNormal,
-                child: Buttons(
-                  text: _connected ? 'Disconnect' : 'Connect',
-                  buttonColor: _connected ? Colors.red[400] : Colors.green[400],
-                  onPressed: () => _onActionButtonPressed(context),
+                SizedBox(height: 40),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: 1,
+                    itemBuilder: (context, index) {
+                      return Row(
+                        children: [
+                          SvgPicture.asset(
+                            'assets/icon/netherlands.svg',
+                          ),
+                          SizedBox(width: 35),
+                          Text('Netherlands', style: TextStyles.regular16,),
+                          const Spacer(),
+                          CupertinoSwitch(
+                            value: sliderIndex == index,
+                            onChanged: (res) {
+                              setState(() {
+                                res ? sliderIndex = index : sliderIndex = -1;
+                              });
+                              _setTunnelState(context);
+                            },
+                          ),
+                        ],
+                      );
+                    },
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
-  }
-
-  _onActionButtonPressed(BuildContext context) {
-    if (_name.isEmpty) {
-      _showError(context, 'Enter the tunnel name');
-      return;
-    }
-    if (_address.isEmpty) {
-      _showError(context, 'Enter the address');
-      return;
-    }
-    if (_listenPort.isEmpty) {
-      _showError(context, 'Enter the listen port');
-      return;
-    }
-    if (_dnsServer.isEmpty) {
-      _showError(context, 'Enter the dns server');
-      return;
-    }
-    if (_privateKey.isEmpty) {
-      _showError(context, 'Enter the private key');
-      return;
-    }
-    if (_peerAllowedIp.isEmpty) {
-      _showError(context, 'Enter the peer allowed IP');
-      return;
-    }
-    if (_peerPublicKey.isEmpty) {
-      _showError(context, 'Enter the public key');
-      return;
-    }
-    if (_peerEndpoint.isEmpty) {
-      _showError(context, 'Enter the peer endpoint');
-      return;
-    }
-
-    _setTunnelState(context);
   }
 
   Future _setTunnelState(BuildContext context) async {

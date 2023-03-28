@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wireguard_flutter/ui/common/app_router.dart';
+import 'package:wireguard_flutter/ui/onboarding_page_screen.dart';
 import 'package:wireguard_flutter/ui/tunnel_details.dart';
 
 void main() {
@@ -6,15 +9,24 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  final _appRouter = AppRouter();
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'WireGuard PoC',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: TunnelDetails(),
+    return ScreenUtilInit(
+      designSize: const Size(325, 708),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) {
+        return MaterialApp.router(
+          title: 'WireGuard PoC',
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+          ),
+          routerDelegate: _appRouter.delegate(),
+          routeInformationParser: _appRouter.defaultRouteParser(),
+        );
+      },
     );
   }
 }
