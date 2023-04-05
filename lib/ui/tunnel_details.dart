@@ -145,7 +145,7 @@ class _TunnelDetailsState extends State<TunnelDetails> {
       final result = await platform.invokeMethod(
         'setState',
         jsonEncode(SetStateParams(
-          state: !_connected,
+          state: _connected,
           tunnel: Tunnel(
             name: _name,
             address: _address,
@@ -158,9 +158,9 @@ class _TunnelDetailsState extends State<TunnelDetails> {
           ),
         ).toJson()),
       );
-      /*if (result == true) {
+      if (result == true) {
         setState(() => _connected = !_connected);
-      }*/
+      }
     } on PlatformException catch (e) {
       l('_setState', e.toString());
       _showError(context, e.toString());

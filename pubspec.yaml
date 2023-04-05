@@ -5,7 +5,7 @@ description: A new Flutter project.
 # pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.2
+version: 1.0.0+1
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -19,6 +19,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   intl: any
   google_fonts: ^4.0.3
+  wireguard_plugin:
+    path: plugins/wireguard_plugin
   file: ^6.1.4
   platform: ^3.1.0
   flutter_svg: ^2.0.4
@@ -32,21 +34,16 @@ dev_dependencies:
   auto_route_generator: ^5.0.3
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.9.0
 
-flutter_icons:
-  android: true
-  ios: true
-  image_path_android: assets/icon/launcher_icon.png
-  image_path_ios: assets/icon/launcher_icon.png
-  adaptive_icon_background: assets/icon/ic_background.png
-  adaptive_icon_foreground: assets/icon/ic_foreground.png
+#flutter_icons:
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter.
 flutter:
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

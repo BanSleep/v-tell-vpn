@@ -14,20 +14,21 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		FD31849229D2D56200124C3E /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31849129D2D56200124C3E /* NetworkExtension.framework */; };
-		FD31849529D2D56200124C3E /* AppProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31849429D2D56200124C3E /* AppProxyProvider.swift */; };
-		FD31849B29D2D56200124C3E /* WireGuardNetExtensioniOS.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FD31849029D2D56200124C3E /* WireGuardNetExtensioniOS.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FDA64AEB29D69E0000E5CE09 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31849129D2D56200124C3E /* NetworkExtension.framework */; };
+		FDA64AEE29D69E0000E5CE09 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA64AED29D69E0000E5CE09 /* PacketTunnelProvider.swift */; };
+		FDA64AF329D69E0000E5CE09 /* WireGuardNetworkExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FDA64AEA29D69E0000E5CE09 /* WireGuardNetworkExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FDA64AFA29D69F5500E5CE09 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD31849129D2D56200124C3E /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FD31849829D2D56200124C3E /* PBXContainerItemProxy */ = {
+		FDA64AF129D69E0000E5CE09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FD31848F29D2D56200124C3E;
-			remoteInfo = WireGuardNetExtensioniOS;
+			remoteGlobalIDString = FDA64AE929D69E0000E5CE09;
+			remoteInfo = WireGuardNetworkExtension;
 		};
-		FD3184A029D2D56C00124C3E /* PBXContainerItemProxy */ = {
+		FDA64AF829D69E3400E5CE09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97C146E61CF9000F007C117D /* Project object */;
 			proxyType = 1;
@@ -53,7 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				FD31849B29D2D56200124C3E /* WireGuardNetExtensioniOS.appex in Embed Foundation Extensions */,
+				FDA64AF329D69E0000E5CE09 /* WireGuardNetworkExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,11 +79,12 @@
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D061429E87A9DA098431D468 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
-		FD31849029D2D56200124C3E /* WireGuardNetExtensioniOS.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WireGuardNetExtensioniOS.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD31849129D2D56200124C3E /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
-		FD31849429D2D56200124C3E /* AppProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProxyProvider.swift; sourceTree = "<group>"; };
-		FD31849629D2D56200124C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD31849729D2D56200124C3E /* WireGuardNetExtensioniOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WireGuardNetExtensioniOS.entitlements; sourceTree = "<group>"; };
+		FDA64AEA29D69E0000E5CE09 /* WireGuardNetworkExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WireGuardNetworkExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA64AED29D69E0000E5CE09 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		FDA64AEF29D69E0000E5CE09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA64AF029D69E0000E5CE09 /* WireGuardNetworkExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WireGuardNetworkExtension.entitlements; sourceTree = "<group>"; };
+		FDA64AFB29D69FEB00E5CE09 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,15 +92,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA64AFA29D69F5500E5CE09 /* NetworkExtension.framework in Frameworks */,
 				7123F51FE3828D266B073B94 /* Pods_Runner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD31848D29D2D56200124C3E /* Frameworks */ = {
+		FDA64AE729D69E0000E5CE09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD31849229D2D56200124C3E /* NetworkExtension.framework in Frameworks */,
+				FDA64AEB29D69E0000E5CE09 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +134,7 @@
 			children = (
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
-				FD31849329D2D56200124C3E /* WireGuardNetExtensioniOS */,
+				FDA64AEC29D69E0000E5CE09 /* WireGuardNetworkExtension */,
 				97C146EF1CF9000F007C117D /* Products */,
 				7FCE49A75C47E1B4B9746006 /* Pods */,
 				F3401894394872BFD01ED55F /* Frameworks */,
@@ -142,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				97C146EE1CF9000F007C117D /* Runner.app */,
-				FD31849029D2D56200124C3E /* WireGuardNetExtensioniOS.appex */,
+				FDA64AEA29D69E0000E5CE09 /* WireGuardNetworkExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				FDA64AFB29D69FEB00E5CE09 /* Runner.entitlements */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -171,14 +175,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FD31849329D2D56200124C3E /* WireGuardNetExtensioniOS */ = {
+		FDA64AEC29D69E0000E5CE09 /* WireGuardNetworkExtension */ = {
 			isa = PBXGroup;
 			children = (
-				FD31849429D2D56200124C3E /* AppProxyProvider.swift */,
-				FD31849629D2D56200124C3E /* Info.plist */,
-				FD31849729D2D56200124C3E /* WireGuardNetExtensioniOS.entitlements */,
+				FDA64AED29D69E0000E5CE09 /* PacketTunnelProvider.swift */,
+				FDA64AEF29D69E0000E5CE09 /* Info.plist */,
+				FDA64AF029D69E0000E5CE09 /* WireGuardNetworkExtension.entitlements */,
 			);
-			path = WireGuardNetExtensioniOS;
+			path = WireGuardNetworkExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +223,7 @@
 			);
 			dependencies = (
 				92B3A8A7261C9AD80034EE6B /* PBXTargetDependency */,
-				FD31849929D2D56200124C3E /* PBXTargetDependency */,
+				FDA64AF229D69E0000E5CE09 /* PBXTargetDependency */,
 			);
 			name = Runner;
 			packageProductDependencies = (
@@ -228,22 +232,22 @@
 			productReference = 97C146EE1CF9000F007C117D /* Runner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FD31848F29D2D56200124C3E /* WireGuardNetExtensioniOS */ = {
+		FDA64AE929D69E0000E5CE09 /* WireGuardNetworkExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD31849C29D2D56200124C3E /* Build configuration list for PBXNativeTarget "WireGuardNetExtensioniOS" */;
+			buildConfigurationList = FDA64AF729D69E0000E5CE09 /* Build configuration list for PBXNativeTarget "WireGuardNetworkExtension" */;
 			buildPhases = (
-				FD31848C29D2D56200124C3E /* Sources */,
-				FD31848D29D2D56200124C3E /* Frameworks */,
-				FD31848E29D2D56200124C3E /* Resources */,
+				FDA64AE629D69E0000E5CE09 /* Sources */,
+				FDA64AE729D69E0000E5CE09 /* Frameworks */,
+				FDA64AE829D69E0000E5CE09 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FD3184A129D2D56C00124C3E /* PBXTargetDependency */,
+				FDA64AF929D69E3400E5CE09 /* PBXTargetDependency */,
 			);
-			name = WireGuardNetExtensioniOS;
-			productName = WireGuardNetExtensioniOS;
-			productReference = FD31849029D2D56200124C3E /* WireGuardNetExtensioniOS.appex */;
+			name = WireGuardNetworkExtension;
+			productName = WireGuardNetworkExtension;
+			productReference = FDA64AEA29D69E0000E5CE09 /* WireGuardNetworkExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -252,8 +256,8 @@
 		97C146E61CF9000F007C117D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					92B3A8A1261C99460034EE6B = {
@@ -263,8 +267,8 @@
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 1100;
 					};
-					FD31848F29D2D56200124C3E = {
-						CreatedOnToolsVersion = 14.1;
+					FDA64AE929D69E0000E5CE09 = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
@@ -286,7 +290,7 @@
 			targets = (
 				97C146ED1CF9000F007C117D /* Runner */,
 				92B3A8A1261C99460034EE6B /* WireGuardGoBridgeiOS */,
-				FD31848F29D2D56200124C3E /* WireGuardNetExtensioniOS */,
+				FDA64AE929D69E0000E5CE09 /* WireGuardNetworkExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD31848E29D2D56200124C3E /* Resources */ = {
+		FDA64AE829D69E0000E5CE09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -392,11 +396,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD31848C29D2D56200124C3E /* Sources */ = {
+		FDA64AE629D69E0000E5CE09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD31849529D2D56200124C3E /* AppProxyProvider.swift in Sources */,
+				FDA64AEE29D69E0000E5CE09 /* PacketTunnelProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,15 +411,15 @@
 			isa = PBXTargetDependency;
 			productRef = 92B3A8A6261C9AD80034EE6B /* WireGuardKit */;
 		};
-		FD31849929D2D56200124C3E /* PBXTargetDependency */ = {
+		FDA64AF229D69E0000E5CE09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FD31848F29D2D56200124C3E /* WireGuardNetExtensioniOS */;
-			targetProxy = FD31849829D2D56200124C3E /* PBXContainerItemProxy */;
+			target = FDA64AE929D69E0000E5CE09 /* WireGuardNetworkExtension */;
+			targetProxy = FDA64AF129D69E0000E5CE09 /* PBXContainerItemProxy */;
 		};
-		FD3184A129D2D56C00124C3E /* PBXTargetDependency */ = {
+		FDA64AF929D69E3400E5CE09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92B3A8A1261C99460034EE6B /* WireGuardGoBridgeiOS */;
-			targetProxy = FD3184A029D2D56C00124C3E /* PBXContainerItemProxy */;
+			targetProxy = FDA64AF829D69E3400E5CE09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -462,6 +466,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -480,11 +485,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PATH = "${PATH}:/opt/homebrew/opt/go@1.20/bin";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -497,9 +502,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = M2LCPJS5V4;
 				ENABLE_BITCODE = NO;
+				FLUTTER_BUILD_NAME = 1.0.0;
+				FLUTTER_BUILD_NUMBER = 1.0.0;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -509,8 +517,12 @@
 				PATH = "${PATH}:/opt/homebrew/opt/go@1.20/bin";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vtell.vpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Profile;
@@ -608,6 +620,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -632,9 +645,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PATH = "${PATH}:/opt/homebrew/opt/go@1.20/bin";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -664,6 +677,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -682,11 +696,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PATH = "${PATH}:/opt/homebrew/opt/go@1.20/bin";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -701,9 +716,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = M2LCPJS5V4;
 				ENABLE_BITCODE = NO;
+				FLUTTER_BUILD_NAME = 1.0.0;
+				FLUTTER_BUILD_NUMBER = 1.0.0;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -713,9 +731,13 @@
 				PATH = "${PATH}:/opt/homebrew/opt/go@1.20/bin";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vtell.vpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -727,9 +749,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = M2LCPJS5V4;
 				ENABLE_BITCODE = NO;
+				FLUTTER_BUILD_NAME = 1.0.0;
+				FLUTTER_BUILD_NUMBER = 1.0.0;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -739,29 +764,32 @@
 				PATH = "${PATH}:/opt/homebrew/opt/go@1.20/bin";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vtell.vpn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
-		FD31849D29D2D56200124C3E /* Debug */ = {
+		FDA64AF429D69E0000E5CE09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = WireGuardNetExtensioniOS/WireGuardNetExtensioniOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = WireGuardNetworkExtension/WireGuardNetworkExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M2LCPJS5V4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WireGuardNetExtensioniOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = WireGuardNetExtensioniOS;
+				INFOPLIST_FILE = WireGuardNetworkExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WireGuardNetworkExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -772,8 +800,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PATH = "${PATH}:/opt/homebrew/opt/go@1.20/bin";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vtell.vpn.WireGuardNetExtensioniOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vtell.vpn.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -784,23 +811,22 @@
 			};
 			name = Debug;
 		};
-		FD31849E29D2D56200124C3E /* Release */ = {
+		FDA64AF529D69E0000E5CE09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = WireGuardNetExtensioniOS/WireGuardNetExtensioniOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = WireGuardNetworkExtension/WireGuardNetworkExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M2LCPJS5V4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WireGuardNetExtensioniOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = WireGuardNetExtensioniOS;
+				INFOPLIST_FILE = WireGuardNetworkExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WireGuardNetworkExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -810,8 +836,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PATH = "${PATH}:/opt/homebrew/opt/go@1.20/bin";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vtell.vpn.WireGuardNetExtensioniOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vtell.vpn.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -820,23 +845,22 @@
 			};
 			name = Release;
 		};
-		FD31849F29D2D56200124C3E /* Profile */ = {
+		FDA64AF629D69E0000E5CE09 /* Profile */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = WireGuardNetExtensioniOS/WireGuardNetExtensioniOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = WireGuardNetworkExtension/WireGuardNetworkExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M2LCPJS5V4;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WireGuardNetExtensioniOS/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = WireGuardNetExtensioniOS;
+				INFOPLIST_FILE = WireGuardNetworkExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WireGuardNetworkExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -846,8 +870,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
-				PATH = "${PATH}:/opt/homebrew/opt/go@1.20/bin";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vtell.vpn.WireGuardNetExtensioniOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vtell.vpn.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -889,12 +912,12 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD31849C29D2D56200124C3E /* Build configuration list for PBXNativeTarget "WireGuardNetExtensioniOS" */ = {
+		FDA64AF729D69E0000E5CE09 /* Build configuration list for PBXNativeTarget "WireGuardNetworkExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD31849D29D2D56200124C3E /* Debug */,
-				FD31849E29D2D56200124C3E /* Release */,
-				FD31849F29D2D56200124C3E /* Profile */,
+				FDA64AF429D69E0000E5CE09 /* Debug */,
+				FDA64AF529D69E0000E5CE09 /* Release */,
+				FDA64AF629D69E0000E5CE09 /* Profile */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
